@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "fab0c81a-72b4-4095-83ad-f63965d55b2d",
+		"name": "prueba-login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9445968"
+	},
+	"item": [
+		{
+			"name": "getJwt - successful",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcnVldmEiOiJqd3QifQ.r-uUK59lPUy98vZFndPx3vaovmTmyMCv8_Gb8SGbS9A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:679/login/getJwt?user=sebitas&password=password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "679",
+					"path": [
+						"login",
+						"getJwt"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "sebitas"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validateJwt - successful",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcnVldmEiOiJqd3QifQ.r-uUK59lPUy98vZFndPx3vaovmTmyMCv8_Gb8SGbS9A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:679/login/validateJwt?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcnVldmEiOiJqd3QifQ.r-uUK59lPUy98vZFndPx3vaovmTmyMCv8_Gb8SGbS9A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "679",
+					"path": [
+						"login",
+						"validateJwt"
+					],
+					"query": [
+						{
+							"key": "jwt",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcnVldmEiOiJqd3QifQ.r-uUK59lPUy98vZFndPx3vaovmTmyMCv8_Gb8SGbS9A"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validateJwt - no valid jwt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcnVldmEiOiJqd3QifQ.r-uUK59lPUy98vZFndPx3vaovmTmyMCv8_Gb8SGbS9A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:679/login/validateJwt?jwt=jwtestamosprobando",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "679",
+					"path": [
+						"login",
+						"validateJwt"
+					],
+					"query": [
+						{
+							"key": "jwt",
+							"value": "jwtestamosprobando"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

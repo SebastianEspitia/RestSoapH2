@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "612a0c9f-e1f8-476a-93d0-d3f0dcaeed07",
+		"name": "prueba-device",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9445968"
+	},
+	"item": [
+		{
+			"name": "successful",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcnVldmEiOiJqd3QifQ.r-uUK59lPUy98vZFndPx3vaovmTmyMCv8_Gb8SGbS9A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:689/device/allDevice?devices=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "689",
+					"path": [
+						"device",
+						"allDevice"
+					],
+					"query": [
+						{
+							"key": "devices",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jwt no valid",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcnVldmEiOiJqd3QifUK59lPUy98vZFndPx3vaovmTmyMCv8_Gb8SGbS9A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:689/device/allDevice?devices=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "689",
+					"path": [
+						"device",
+						"allDevice"
+					],
+					"query": [
+						{
+							"key": "devices",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

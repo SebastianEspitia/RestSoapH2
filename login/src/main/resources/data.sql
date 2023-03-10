@@ -1,0 +1,7 @@
+CREATE TABLE USER_AUTHENTICATION (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  jwt VARCHAR(255)
+);
+
+insert into USER_AUTHENTICATION(name,jwt) values ('seb','ok');
