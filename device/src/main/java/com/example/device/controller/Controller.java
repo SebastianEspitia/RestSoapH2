@@ -33,7 +33,6 @@ public class Controller {
         ResponseStructure response = new ResponseStructure();
         try {
             ResgisterDevicesGroup res = implement.logic(jwt, devices);
-            log.info(res);
             if(res!=null) {
                 response.setCode(common.successfulCode);
                 response.setState(common.successfulState);

@@ -31,10 +31,9 @@ public class SoapClient extends WebServiceGatewaySupport {
         JAXBElement<ResgisterDevicesResponseType> resposeMsg;
         ResgisterDevicesRequestType request = new ResgisterDevicesRequestType();
         request.setDevices(jwt);
-        log.info("request");
+
 
         JAXBElement<ResgisterDevicesRequestType> requestMsg = obj.createResgisterDevicesRequest(request);
-        log.info(requestMsg);
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setContextPath("com.example.device.model.wsdl");
         WebServiceTemplate webServiceTemplate = new WebServiceTemplate();

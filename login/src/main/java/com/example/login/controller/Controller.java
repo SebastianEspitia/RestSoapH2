@@ -55,7 +55,7 @@ public class Controller {
     @Operation(summary = "validate that the jwt is correct")
     public ResponseEntity<ResponseStructure> validateJwt(@Parameter(description = "jwt") @RequestParam String jwt) {
         ResponseStructure response = new ResponseStructure();
-        log.info(""+jwt);
+
         try {
             boolean res = implementation.validateToken(jwt);
             if(res) {

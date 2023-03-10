@@ -4,7 +4,6 @@ public interface Common {
     String successfulState = "ok";
     String noSuccessfulState = " no ok";
     Integer successfulCode = 200;
-    Integer createdCode = 201;
     Integer badRequestCode = 400;
     Integer internalServerErrorCode = 500;
     String invalidToken = "invalid jwt";

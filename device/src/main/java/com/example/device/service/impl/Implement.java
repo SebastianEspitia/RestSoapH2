@@ -24,7 +24,7 @@ public class Implement {
 
     public ResgisterDevicesGroup logic(String jwt, String devices) {
 
-        log.info("jwt" + jwt + "devices" + devices);
+
         ResgisterDevicesGroup resgisterDevicesGroup = new ResgisterDevicesGroup();
         boolean call = callGetUser(jwt);
         if (call) {
@@ -58,8 +58,6 @@ public class Implement {
             String ruta = rutalogin+"=" + jwt;
             JsonNode responseConsumption = consumption.consumo(ruta);
             response = true;
-            log.info("response");
-            log.info(responseConsumption);
         } catch (Exception e) {
             log.info("error:   " + e);
         }
